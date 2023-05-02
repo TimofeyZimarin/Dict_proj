@@ -1,0 +1,29 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Добавить картинку к слову в словаре
+{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h3>Введите слово, к которому вы хотите добавить картинку</h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-4">
+                <label for="old_term">Слово:</label>
+                <input type="text" class="form-control input-lg" name="old_term" id="old_term">
+            </div>
+            <div class="col-md-8">
+                <label for="add_picture">Ссылка на картинку</label>
+                <textarea type="text" class="form-control input-lg" name="add_picture" id="add_picture" aria-describedby="definition_note" rows="3"></textarea>
+                <div id="definition_note" class="form-text">Откройте нужную картинку в новой вкладке в браузере и вставьте ссылку на эту картинку</div>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <button type="submit" class="btn btn-primary" formaction="/add-term-picture">Отправить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

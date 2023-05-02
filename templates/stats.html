@@ -1,0 +1,50 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Информация о словаре
+{% endblock %}
+
+{% block page-lead %}
+
+<div class="card">
+  <h5 class="card-header">Статистика словаря</h5>
+  <div class="card-body">
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.lexicons.ru/modern/a/english/_images/english-wordbooks.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+            <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">На этой странице отображается подробная статистика изучения новых слов.</div>
+        </div>
+      </div>
+      <div class="container px-4 py-5" id="stats">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>{{ len }}</h4>
+                <p class="text-muted">Всего слов в словаре</p>
+            </div>
+            <div class="col-md-4">
+                <h4>{{ days }}</h4>
+                <p class="text-muted">Количество дней обучения</p>
+            </div>
+            <div class="col-md-4">
+                <h4>{{ avg }}</h4>
+                <p class="text-muted">Слов в среднем в день</p>
+            </div>
+            <div class="col-md-4">
+                <h4>{{ week }}</h4>
+                <p class="text-muted">Количество недель обучения</p>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!--<div class="card" style="width: 18rem;">-->
+<!--  <img src="https://www.lexicons.ru/modern/a/english/_images/english-wordbooks.jpg" class="card-img-top" alt="">-->
+<!--  <div class="card-body">-->
+<!--    <p class="card-text">На этой странице отображается подробная статистика изучения новых слов.</p>-->
+<!--  </div>-->
+<!--</div>-->
+{% endblock %}
+
+
